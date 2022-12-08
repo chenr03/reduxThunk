@@ -7,7 +7,7 @@ const Import = (props) => {
 
     return (
         <Container maxWidth='md'>
-            <Button onClick={props.fetchMakes} variant='contained' color='primary'>
+            <Button onClick={props.fetchMakes} variant='contained'>
                 Import
             </Button>
             <Table>
@@ -19,10 +19,10 @@ const Import = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.makes.map((makes, idx) => (
-                        <TableRow key={makes.MakeId}>
-                            <TableCell>{makes.MakeName}</TableCell>
-                            <TableCell>{''}</TableCell>
+                    {props.makes.map((car, idx) => (
+                        <TableRow key={car.MakeId}>
+                            <TableCell>{car.MakeId}</TableCell>
+                            <TableCell>{car.MakeName}</TableCell>
                             <TableCell>
                                 <DeleteIcon
                                     onClick={() => props.removeCar(idx)}
@@ -39,4 +39,3 @@ const Import = (props) => {
 
 export default Import;
 
-// const

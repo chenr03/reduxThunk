@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 // import { Container, Paper, Chip } from '@mui/material';
-// import cars from '../cars.json' // remove this
+import Button from '@mui/material/Button';
+
 
 const Makes = (props) => {
     console.log('Props:', props);
@@ -12,9 +13,13 @@ const Makes = (props) => {
 
     }, [props])
 
+
+
     return (
        <div>
-           Hello World
+           <Button onClick={() => {
+               console.log('click')
+           }} variant ="contained" > Makes </Button>
        </div>
     )
 }
