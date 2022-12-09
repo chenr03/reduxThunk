@@ -5,7 +5,6 @@ import About from './components/About'
 import Car from './containers/Car'
 import Dashboard from './containers/Dashboard'
 import Import from './containers/Import'
-import Makes from './containers/Makes'
 
 const Router = () => {
     return (
@@ -14,8 +13,7 @@ const Router = () => {
             <Route path="/about" component={About} />
             <Route path="/car/:id" component={Car} />
             <Route path="/dashboard" component={Dashboard} />
-            <Route path="/makes" component={Makes} />
-            <Route path="/import" containers={Import} />
+            <Route path="/import" component={Import} />
         </Switch>
     );
 };

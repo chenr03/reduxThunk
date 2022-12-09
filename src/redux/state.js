@@ -147,7 +147,7 @@ export default {
         }
     ],
 
-    makes: ['BMW'] // This comes from an API
+    makes: [] // This comes from an API
 
 
   };

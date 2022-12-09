@@ -1,11 +1,10 @@
 import React from 'react'
-import { Container, Paper, Chip } from '@mui/material';
 
+import { Container, Paper, Chip } from '@mui/material';
 
 const Car = (props) => {
     const id = props.match.params.id
-
-    const car = props.cars.find(c => c.id == id)
+    const car = props.cars.find(c => c.id === id)
 
     return (
         <Container maxWidth="sm" className="car-container">

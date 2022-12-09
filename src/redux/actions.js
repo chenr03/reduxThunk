@@ -16,16 +16,22 @@ export const removeCar = (index) => {
 
 export const fetchMakes = () => {
     return (dispatch) => {
-        fetch(url).then((response) => response.json()).then((response) => {
-            const action = {
-                type: "FETCH_MAKES",
-                value: response.results
-            }
-            console.log('Inside Action Creator')
-            dispatch(action)
-        })
-            .catch(function (err) {
-                return err;
+        fetch(url)
+            .then(res => res.json())
+            .then(response => {
+                const action = {
+                    type: 'FETCH_MAKES',
+                    value: response.Results
+                }
+                // console.log("Inside Action created");
+                dispatch(action)
             })
     }
-}
+};
+
+export const deleteMake = (index) => {
+    return {
+        type: 'DELETE_MAKE',
+        value: index
+    };
+};

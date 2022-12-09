@@ -26,9 +26,6 @@ const Navigation = () => {
                         <Link to="/dashboard">Dashboard</Link>
                     </li>
                     <li className="nav-list-item">
-                        <Link to="/makes">Makes</Link>
-                    </li>
-                    <li className="nav-list-item">
                         <Link to="/import">Import</Link>
                     </li>
                 </ul>
